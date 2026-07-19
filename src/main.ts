@@ -4,6 +4,11 @@
  * and keeps the heavy work in Web Audio + a dedicated encoder worker.
  */
 
+// feedback:begin (managed by hub/scripts/feedback/backfill.mjs)
+import { mountFeedback } from './feedback';
+mountFeedback();
+// feedback:end
+
 import './styles/main.css';
 import type { Clip, EncodeResponse, ExportSettings, OutputFormat, Region, SourceInfo } from './types';
 import {
